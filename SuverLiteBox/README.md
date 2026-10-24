@@ -20,15 +20,15 @@
 <summary><strong>Скриншот темы</strong></strong></summary>
 
 <p align="center">
-  <img src="./screenshots/home.png" alt="Главная страница" width="600"/>
+  <img src="https://dev.whitepingvin.ru/wp-content/uploads/2026/10/dev.whitepingvin.ru_.png" alt="Главная страница" width="600"/>
   <br/>
   <em>Главная страница: фиксированная шапка, адаптивный сайдбар.</em>
 </p>
 
 <p align="center">
-  <img src="./screenshots/single.png" alt="Страница поста" width="600"/>
+  <img src="https://dev.whitepingvin.ru/wp-content/uploads/2026/10/page_comment.png" alt="Страница комментариев" width="600"/>
   <br/>
-  <em>Страница записи: контент занимает всю ширину экрана.</em>
+  <em>Страница комментариев: древовидные комментарии.</em>
 </p>
 </details>
 
