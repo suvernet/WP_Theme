@@ -1,0 +1,317 @@
+/*
+Theme Name: SuverLiteBox
+Theme URI: https://example.com
+Author: Suvernet - https://github.com/suvernet
+Description: Минималистичная тема без лишнего кода.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+
+/* Reset CSS */
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fafafa; }
+a { text-decoration: none; color: #118cc9; transition: .2s; }
+a:hover { opacity: .75; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* Базовая сетка */
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Шапка */
+.site-header {
+    position: relative;
+    z-index: 10;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #f3f3f3;
+    /* box-shadow: 0 2px 4px rgba(0,0,0,.05); */
+    display: flex;
+    justify-content: space-between;    
+    align-items: center;
+    flex-direction:row;
+}
+.menu-toggle {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+#site-navigation ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+#site-navigation li a {
+    display: block;
+    padding: .5rem 1rem;
+}
+
+#menu-toggle { display: none !important; }
+
+#menu-toggle {
+    background: transparent;
+    border: none;
+    font-size: xx-large;
+    color: #479ae5;
+    position: absolute;
+    right: 30px;
+    top: 25px;
+}
+
+main.content {
+    width: 60%;
+    margin: 0 auto;
+    padding: 40px;
+    background: #fff;
+    font-size: 15px;
+}
+
+.attachment_content {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+aside {
+    width: 40%;
+}
+
+/* Сайдбар со всеми виджетами */
+.widget-area {
+    /* Ширина виджетов на десктопе */
+    width: calc(100% - var(--main-width));
+    background-color: #fff;
+    padding: 20px 10px 20px 60px;
+}
+
+li.cat-item {
+    list-style: none;
+}
+h2.wp-block-heading {
+    font-family: Roboto;
+    font-size: 1.4em !important;
+    font-weight: 400;
+    color: #304b63;
+    margin-top: 23px;
+}
+.wp-block-group {
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+
+
+/* ==================
+          ПОСТ
+    ================= */
+
+h2.title_post {
+    font-size: 1.3em;
+    font-weight: 300;
+}
+h2.title_post a {
+    color: #118cc9;
+}
+.entry-content {
+    line-height: 1.4;
+}
+.date_author, .post_footer {
+    font-size: 12px;
+    color: #008bc6;
+}
+
+/* =====================
+        COMMENT
+    ==================== */
+#comments {
+    max-width: 800px;
+    border: 1px solid #c9c9c9;
+    padding: 20px;
+    margin: 30px auto 0;
+}
+.comments {
+    border: 1px solid #c9c9c9;
+    padding: 20px;
+    background: #fff;
+}
+.comment-author {
+    font-size: 14px;
+}
+.comment-metadata {
+    font-size: 12px;
+}
+.comment-content {
+    font-size: 15px;
+}
+.reply {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #007cbe;
+}
+.comment-reply-title {
+    padding: 10px 0;
+}
+p.comment-notes {
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+.comment-form p.comment-form-author,
+.comment-form p.comment-form-email,
+.comment-form p.comment-form-url,
+.comment-form p.comment-form-comment {
+  display: block;
+  margin: 0 0 20px 0; /* отступ снизу для ровного ритма */
+  width: 100%;
+}
+.comment-form p.comment-form-author label,
+.comment-form p.comment-form-email label,
+.comment-form p.comment-form-url label,
+.comment-form p.comment-form-comment label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #333;
+}
+
+.comment-form p.comment-form-author input,
+.comment-form p.comment-form-email input,
+.comment-form p.comment-form-url input,
+.comment-form textarea#comment {
+  width: 100%;
+  max-width: 500px; /* ограничение ширины для аккуратности */
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.form-submit input[type="submit"] {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0073aa;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  max-width: 500px; /* чтобы не была шире полей */
+}
+span.required {
+    color: red;
+}
+p.comment-form-cookies-consent {
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+/* Адаптивность */
+@media screen and (min-width: 768px) {
+    /* На больших экранах показываем горизонтальное меню */
+    #site-navigation {
+        display: flex !important;
+        gap: 1rem;
+    }
+    #site-navigation li {
+        display: inline-block;
+    }
+
+
+  /* Делаем меню горизонтальным */
+  #site-navigation ul {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+
+
+}
+
+/* Основная колонка контента */
+@media screen and (min-width: 780px) { 
+    .site-main { width: var(--main-width, 65%); }
+}
+
+/* Адаптивность: на узких экранах виджеты внизу */
+@media screen and (max-width: 779px) {
+    .content-wrap { flex-direction: column-reverse; } /* Сначала контент, потом виджеты */
+    .widget-area { width: auto; } /* Чтобы они занимали всю ширину */
+}
+
+
+@media screen and (max-width: 798px) {
+
+#menu-toggle { display: block !important; 
+    }
+
+.site-header {
+    flex-direction: column !important;
+    align-items: center;
+    }
+
+.attachment_content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    }
+main.content {
+    width: 100%;
+    }
+aside {
+    width: 100%;
+    }
+
+}
+  
+@media screen and (max-width: 597px) {
+.site-header h1 a {
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 300;
+}
+#menu-toggle {
+    font-size: larger;
+    top: 60px;
+    right: 10px;
+}
+#site-navigation {
+    font-family: Roboto;
+    font-weight: 300;
+}
+main.content {
+    width: 100%;
+    padding: 40px 20px;
+    font-size: 14px;
+}
+p.comment-notes {
+    font-size: 12px;
+}
+.comment-form p.comment-form-author, .comment-form p.comment-form-email, .comment-form p.comment-form-url, .comment-form p.comment-form-comment {
+    margin: 0 0 5px 0;
+}
+.comment-form p.comment-form-author label, .comment-form p.comment-form-email label, .comment-form p.comment-form-url label, .comment-form p.comment-form-comment label {
+    display: block;
+    margin-bottom: 0px;
+    font-size: 11px;
+    color: #333;
+}
+p.comment-form-cookies-consent {
+    padding: 10px 0;
+    font-size: 11px;
+}
+.form-submit input[type="submit"] {
+    font-size: 12px;
+    margin-bottom: 40px;
+}
+footer {
+    font-size: 12px;
+}
+
+}
